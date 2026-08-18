@@ -1,0 +1,22 @@
+### Get all items
+GET http://localhost:8080/api/items
+
+### Create item
+POST http://localhost:8080/api/items
+Authorization: Basic admin password
+Content-Type: application/json
+
+{
+  "name": "Pasta",
+  "quantity": 1,
+  "minThreshold": 5
+}
+
+### Restock item 1
+PATCH http://localhost:8080/api/items/1/restock
+Content-Type: application/json
+Authorization: Basic admin password
+
+{
+  "quantity": -5
+}
